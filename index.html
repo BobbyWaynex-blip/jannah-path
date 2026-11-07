@@ -1,111 +1,256 @@
 <!doctype html>
+
 <html lang="en">
 <head>
-  <section class="support-section" aria-labelledby="support-title">
-  <h2 id="support-title">Support Jannah Path</h2>
-  <p>Choose an optional advert to support the project.</p>
-
-  <button id="rewarded-interstitial-button" type="button">
-    Watch Rewarded Interstitial
-  </button>
-
-  <button id="rewarded-popup-button" type="button">
-    Watch Rewarded Popup
-  </button>
-  </section>
-  <script src="https://libtl.com/sdk.js" data-zone="12194311" data-sdk="show_12194311"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#102b25">
-  <meta name="description" content="A gentle daily companion for Quran, duas, dhikr, reminders, quizzes, and good deeds.">
-  <title>Jannah Path — Your daily Islamic companion</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="description" content="A gentle daily companion for Quran, duas, dhikr, reminders, quizzes, and good deeds.">  <title>Jannah Path — Your daily Islamic companion</title>  <!-- Monetag SDK -->  <script src="https://libtl.com/sdk.js" data-zone="12194311" data-sdk="show_12194311"></script>  <!-- Fonts -->  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <div class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="#home" aria-label="Jannah Path home"><span class="brand-mark" aria-hidden="true">☾</span><span>Jannah <b>Path</b></span></a>
-      <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">☼</button>
-    </header>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">  <!-- App stylesheet -->  <link rel="stylesheet" href="style.css">  <!-- Telegram integration -->  <script src="https://telegram.org/js/telegram-web-app.js"></script>  <!-- App JavaScript -->  <script src="script.js" defer></script></head><body>
+  <div class="app-shell"><header class="topbar">
+  <a class="brand" href="#home" aria-label="Jannah Path home">
+    <span class="brand-mark" aria-hidden="true">☾</span>
+    <span>Jannah <b>Path</b></span>
+  </a>
 
-    <main id="main-content">
-      <section class="view active" id="home-view" <div class="support-card">
-  <h2>Support Jannah Path</h2>
-  <p>Help support our free Islamic reminder platform.</p>
+  <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">☼</button>
+</header>
 
-  <button id="rewarded-interstitial-button" type="button">
-    Watch an Ad to Support Us
+<main id="main-content">
+
+  <!-- HOME -->
+  <section class="view active" id="home-view" aria-labelledby="welcome-title">
+
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow" id="today-label">YOUR DAILY PAUSE</span>
+        <h1 id="welcome-title">A little closer,<br>every day.</h1>
+        <p>Make space for remembrance, reflection, and good.</p>
+      </div>
+      <div class="moon-art" aria-hidden="true">☾<span>✦</span></div>
+    </div>
+
+    <!-- OPTIONAL MONETAG SUPPORT -->
+    <div class="support-card">
+      <h2>Support Jannah Path</h2>
+      <p>Help support our free Islamic reminder platform. Watching an advert is completely optional.</p>
+
+      <button id="rewarded-interstitial-button" type="button">
+        Watch an Ad to Support Us
+      </button>
+
+      <button id="rewarded-popup-button" type="button">
+        Watch Another Ad
+      </button>
+    </div>
+
+    <article class="verse-card">
+      <div class="card-label">
+        <span>AYAH FOR TODAY</span>
+        <span class="ornament">✳</span>
+      </div>
+      <p class="arabic verse-arabic" lang="ar" dir="rtl">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا</p>
+      <p class="translation">“For indeed, with hardship [will be] ease.”</p>
+      <p class="citation">Quran 94:5</p>
+    </article>
+
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">YOUR PRACTICE</span>
+        <h2>Today, with intention</h2>
+      </div>
+      <span class="date-pill" id="date-pill"></span>
+    </div>
+
+    <div class="practice-grid">
+      <button class="practice-card" data-open="quran">
+        <span class="practice-icon">▤</span>
+        <span><b>Read Quran</b><small>Explore the surahs</small></span>
+        <span class="arrow">↗</span>
+      </button>
+
+      <button class="practice-card" data-open="duas">
+        <span class="practice-icon">✧</span>
+        <span><b>Daily duas</b><small>Words for every moment</small></span>
+        <span class="arrow">↗</span>
+      </button>
+
+      <button class="practice-card" data-open="tasbih">
+        <span class="practice-icon">◉</span>
+        <span><b>Digital tasbih</b><small>Keep your dhikr close</small></span>
+        <span class="arrow">↗</span>
+      </button>
+
+      <button class="practice-card" data-open="learn">
+        <span class="practice-icon">♡</span>
+        <span><b>Good deeds</b><small>Small acts, big meaning</small></span>
+        <span class="arrow">↗</span>
+      </button>
+    </div>
+
+    <article class="reminder-card">
+      <span class="reminder-icon">✦</span>
+      <div>
+        <span class="eyebrow">A GENTLE REMINDER</span>
+        <p id="reminder-text">The most beloved deeds to Allah are those that are most consistent, even if they are small.</p>
+        <small id="reminder-source">Sahih al-Bukhari 6464</small>
+      </div>
+      <button class="text-button" id="new-reminder" type="button" aria-label="Show another reminder">↻</button>
+    </article>
+
+  </section>
+
+  <!-- QURAN -->
+  <section class="view" id="quran-view" aria-labelledby="quran-title">
+
+    <div class="page-heading">
+      <span class="eyebrow">READ & REFLECT</span>
+      <h1 id="quran-title">The Quran</h1>
+      <p>Browse surahs and read their translation.</p>
+    </div>
+
+    <label class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <input id="surah-search" type="search" placeholder="Search surahs" autocomplete="off" aria-label="Search surahs">
+    </label>
+
+    <div id="surah-list" class="surah-list" aria-live="polite">
+      <p class="loading">Loading surahs…</p>
+    </div>
+
+    <div id="surah-reader" class="surah-reader" hidden>
+      <button class="back-button" id="back-to-surahs" type="button">← All surahs</button>
+      <div id="surah-content"></div>
+    </div>
+
+    <p class="fine-print">Translations are provided for reflection and do not replace the original Arabic text or scholarly tafsir.</p>
+  </section>
+
+  <!-- DAILY DUAS -->
+  <section class="view" id="duas-view" aria-labelledby="duas-title">
+
+    <div class="page-heading">
+      <span class="eyebrow">WORDS TO CARRY</span>
+      <h1 id="duas-title">Daily duas</h1>
+      <p>Beautiful supplications for your everyday moments.</p>
+    </div>
+
+    <div class="filter-row" role="group" aria-label="Filter duas">
+      <button class="filter-chip selected" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="morning">Morning</button>
+      <button class="filter-chip" data-filter="evening">Evening</button>
+      <button class="filter-chip" data-filter="anytime">Anytime</button>
+    </div>
+
+    <div class="dua-list" id="dua-list"></div>
+
+    <p class="fine-print">Arabic and references are shown where available. Please consult trusted sources for detailed context and rulings.</p>
+  </section>
+
+  <!-- DIGITAL TASBIH -->
+  <section class="view" id="tasbih-view" aria-labelledby="tasbih-title">
+
+    <div class="page-heading">
+      <span class="eyebrow">REMEMBER ALLAH</span>
+      <h1 id="tasbih-title">Digital tasbih</h1>
+      <p>A quiet moment of dhikr, one count at a time.</p>
+    </div>
+
+    <div class="tasbih-panel">
+      <label for="dhikr-select">Choose your dhikr</label>
+
+      <select id="dhikr-select">
+        <option value="سُبْحَانَ اللَّهِ">SubhanAllah · سُبْحَانَ اللَّهِ</option>
+        <option value="الْحَمْدُ لِلَّهِ">Alhamdulillah · الْحَمْدُ لِلَّهِ</option>
+        <option value="اللَّهُ أَكْبَرُ">Allahu Akbar · اللَّهُ أَكْبَرُ</option>
+        <option value="أَسْتَغْفِرُ اللَّهَ">Astaghfirullah · أَسْتَغْفِرُ اللَّهَ</option>
+        <option value="لَا إِلَٰهَ إِلَّا اللَّهُ">La ilaha illa Allah · لَا إِلَٰهَ إِلَّا اللَّهُ</option>
+      </select>
+
+      <button class="counter-button" id="count-button" type="button" aria-label="Increment tasbih count">
+        <span class="arabic" id="selected-dhikr" lang="ar" dir="rtl">سُبْحَانَ اللَّهِ</span>
+        <span class="count-number" id="count-number" aria-live="polite">0</span>
+        <span class="count-hint">TAP TO COUNT</span>
+      </button>
+
+      <div class="counter-controls">
+        <button class="secondary-button" id="undo-count" type="button">Undo</button>
+        <button class="secondary-button" id="reset-count" type="button">Reset</button>
+      </div>
+
+      <p class="tasbih-note">Your count is saved on this device.</p>
+    </div>
+  </section>
+
+  <!-- LEARN AND GOOD DEEDS -->
+  <section class="view" id="learn-view" aria-labelledby="learn-title">
+
+    <div class="page-heading">
+      <span class="eyebrow">GROW WITH PURPOSE</span>
+      <h1 id="learn-title">Learn & do good</h1>
+      <p>One question, one kind act, one step at a time.</p>
+    </div>
+
+    <article class="quiz-card">
+      <div class="quiz-top">
+        <span class="eyebrow">QUICK QUIZ</span>
+        <span class="quiz-progress" id="quiz-progress">Question 1 of 5</span>
+      </div>
+
+      <h2 id="quiz-question"></h2>
+      <div class="quiz-options" id="quiz-options"></div>
+      <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
+      <button class="primary-button" id="next-question" type="button" hidden>Next question →</button>
+    </article>
+
+    <div class="section-heading deeds-heading">
+      <div>
+        <span class="eyebrow">A GOOD DEED A DAY</span>
+        <h2>Today's intentions</h2>
+      </div>
+      <span class="deed-score" id="deed-score">0 / 5</span>
+    </div>
+
+    <div class="deed-list" id="deed-list"></div>
+
+    <button class="text-button clear-deeds" id="reset-deeds" type="button">Reset today's checklist</button>
+  </section>
+
+</main>
+
+<!-- BOTTOM NAVIGATION -->
+<nav class="bottom-nav" aria-label="Main navigation">
+
+  <button class="nav-item active" data-view="home" aria-current="page">
+    <span>⌂</span>
+    <small>Home</small>
   </button>
 
-  <button id="rewarded-popup-button" type="button">
-    Watch Another Ad
+  <button class="nav-item" data-view="quran">
+    <span>▤</span>
+    <small>Quran</small>
   </button>
-      </div> aria-labelledby="welcome-title">
-        <div class="hero">
-          <div class="hero-copy"><span class="eyebrow" id="today-label">YOUR DAILY PAUSE</span><h1 id="welcome-title">A little closer,<br>every day.</h1><p>Make space for remembrance, reflection, and good.</p></div>
-          <div class="moon-art" aria-hidden="true">☾<span>✦</span></div>
-        </div>
-        <article class="verse-card">
-          <div class="card-label"><span>AYAH FOR TODAY</span><span class="ornament">✳</span></div>
-          <p class="arabic verse-arabic" lang="ar" dir="rtl">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا</p>
-          <p class="translation">“For indeed, with hardship [will be] ease.”</p>
-          <p class="citation">Quran 94:5</p>
-        </article>
-        <div class="section-heading"><div><span class="eyebrow">YOUR PRACTICE</span><h2>Today, with intention</h2></div><span class="date-pill" id="date-pill"></span></div>
-        <div class="practice-grid">
-          <button class="practice-card" data-open="quran"><span class="practice-icon">▤</span><span><b>Read Quran</b><small>Explore the surahs</small></span><span class="arrow">↗</span></button>
-          <button class="practice-card" data-open="duas"><span class="practice-icon">✧</span><span><b>Daily duas</b><small>Words for every moment</small></span><span class="arrow">↗</span></button>
-          <button class="practice-card" data-open="tasbih"><span class="practice-icon">◉</span><span><b>Digital tasbih</b><small>Keep your dhikr close</small></span><span class="arrow">↗</span></button>
-          <button class="practice-card" data-open="learn"><span class="practice-icon">♡</span><span><b>Good deeds</b><small>Small acts, big meaning</small></span><span class="arrow">↗</span></button>
-        </div>
-        <article class="reminder-card"><span class="reminder-icon">✦</span><div><span class="eyebrow">A GENTLE REMINDER</span><p id="reminder-text">The most beloved deeds to Allah are those that are most consistent, even if they are small.</p><small id="reminder-source">Sahih al-Bukhari 6464</small></div><button class="text-button" id="new-reminder" type="button" aria-label="Show another reminder">↻</button></article>
-      </section>
 
-      <section class="view" id="quran-view" aria-labelledby="quran-title">
-        <div class="page-heading"><span class="eyebrow">READ & REFLECT</span><h1 id="quran-title">The Quran</h1><p>Browse surahs and read their translation.</p></div>
-        <label class="search-box"><span aria-hidden="true">⌕</span><input id="surah-search" type="search" placeholder="Search surahs" autocomplete="off" aria-label="Search surahs"></label>
-        <div id="surah-list" class="surah-list" aria-live="polite"><p class="loading">Loading surahs…</p></div>
-        <div id="surah-reader" class="surah-reader" hidden><button class="back-button" id="back-to-surahs" type="button">← All surahs</button><div id="surah-content"></div></div>
-        <p class="fine-print">Translations are provided for reflection and do not replace the original Arabic text or scholarly tafsir.</p>
-      </section>
+  <button class="nav-item" data-view="duas">
+    <span>✧</span>
+    <small>Duas</small>
+  </button>
 
-      <section class="view" id="duas-view" aria-labelledby="duas-title">
-        <div class="page-heading"><span class="eyebrow">WORDS TO CARRY</span><h1 id="duas-title">Daily duas</h1><p>Beautiful supplications for your everyday moments.</p></div>
-        <div class="filter-row" role="group" aria-label="Filter duas"><button class="filter-chip selected" data-filter="all">All</button><button class="filter-chip" data-filter="morning">Morning</button><button class="filter-chip" data-filter="evening">Evening</button><button class="filter-chip" data-filter="anytime">Anytime</button></div>
-        <div class="dua-list" id="dua-list"></div>
-        <p class="fine-print">Arabic and references are shown where available. Please consult trusted sources for detailed context and rulings.</p>
-      </section>
+  <button class="nav-item" data-view="tasbih">
+    <span>◉</span>
+    <small>Tasbih</small>
+  </button>
 
-      <section class="view" id="tasbih-view" aria-labelledby="tasbih-title">
-        <div class="page-heading"><span class="eyebrow">REMEMBER ALLAH</span><h1 id="tasbih-title">Digital tasbih</h1><p>A quiet moment of dhikr, one count at a time.</p></div>
-        <div class="tasbih-panel"><label for="dhikr-select">Choose your dhikr</label><select id="dhikr-select"><option value="سُبْحَانَ اللَّهِ">SubhanAllah · سُبْحَانَ اللَّهِ</option><option value="الْحَمْدُ لِلَّهِ">Alhamdulillah · الْحَمْدُ لِلَّهِ</option><option value="اللَّهُ أَكْبَرُ">Allahu Akbar · اللَّهُ أَكْبَرُ</option><option value="أَسْتَغْفِرُ اللَّهَ">Astaghfirullah · أَسْتَغْفِرُ اللَّهَ</option><option value="لَا إِلَٰهَ إِلَّا اللَّهُ">La ilaha illa Allah · لَا إِلَٰهَ إِلَّا اللَّهُ</option></select>
-          <button class="counter-button" id="count-button" type="button" aria-label="Increment tasbih count"><span class="arabic" id="selected-dhikr" lang="ar" dir="rtl">سُبْحَانَ اللَّهِ</span><span class="count-number" id="count-number" aria-live="polite">0</span><span class="count-hint">TAP TO COUNT</span></button>
-          <div class="counter-controls"><button class="secondary-button" id="undo-count" type="button">Undo</button><button class="secondary-button" id="reset-count" type="button">Reset</button></div>
-          <p class="tasbih-note">Your count is saved on this device.</p>
-        </div>
-      </section>
+  <button class="nav-item" data-view="learn">
+    <span>♡</span>
+    <small>Learn</small>
+  </button>
 
-      <section class="view" id="learn-view" aria-labelledby="learn-title">
-        <div class="page-heading"><span class="eyebrow">GROW WITH PURPOSE</span><h1 id="learn-title">Learn & do good</h1><p>One question, one kind act, one step at a time.</p></div>
-        <article class="quiz-card"><div class="quiz-top"><span class="eyebrow">QUICK QUIZ</span><span class="quiz-progress" id="quiz-progress">Question 1 of 5</span></div><h2 id="quiz-question"></h2><div class="quiz-options" id="quiz-options"></div><p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p><button class="primary-button" id="next-question" type="button" hidden>Next question →</button></article>
-        <div class="section-heading deeds-heading"><div><span class="eyebrow">A GOOD DEED A DAY</span><h2>Today's intentions</h2></div><span class="deed-score" id="deed-score">0 / 5</span></div>
-        <div class="deed-list" id="deed-list"></div><button class="text-button clear-deeds" id="reset-deeds" type="button">Reset today's checklist</button>
-      </section>
-    </main>
+</nav>
 
-    <nav class="bottom-nav" aria-label="Main navigation">
-      <button class="nav-item active" data-view="home" aria-current="page"><span>⌂</span><small>Home</small></button>
-      <button class="nav-item" data-view="quran"><span>▤</span><small>Quran</small></button>
-      <button class="nav-item" data-view="duas"><span>✧</span><small>Duas</small></button>
-      <button class="nav-item" data-view="tasbih"><span>◉</span><small>Tasbih</small></button>
-      <button class="nav-item" data-view="learn"><span>♡</span><small>Learn</small></button>
-    </nav>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
   </div>
 </body>
-</html>
+        </html>
